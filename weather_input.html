@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Weather Dashboard</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='design/weather_input.css)}}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300;1,700&display=swap" rel="styelsheet">
+    </head>
+    <body>
+        <h2 class="weatherText">WEATHER FORECAST</h2>
+        <form class="weatherText" id="weatherForm" action="{{url_for('render_results')}}" method="post">
+            Enter location's Country Code: <input class="weatherText" id="weatherInput" type="text" name="countryCode"><br>
+            <br>
+            Enter location's Zip/Pin Code: <input class="weatherText" id="weatherInput" type="text" name="zipCode"><br>
+            <br>
+            <input class="weatherText" id="weatherSubmit" type="submit" value="Submit">
+        </form>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Weather Dashboard</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='design/weather_output.css)}}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300;1,700&display=swap" rel="styelsheet">
+    </head>
+    <body>
+        <div id="weatherResults">
+            <h2>Weather in {{ location }}</h2>
+            <h1>{{ temp }}° C</h1>
+            <h3>{{ weather }}</h3>
+            <h4>Feels like: {{ feels_like }}° C</h4>
+            <h4>Minimum temperature: {{ temp_min }}° C</h4>
+            <h4>Maximum temperature: {{ temp_max }}° C</h4>
+            <h4>Pressure: {{ pressure }} Pa</h4>
+        </div>
+    </body>
+</html>
